@@ -1,0 +1,5 @@
+Takes animelist_csv.csv's data and spits out data prompted by a user input.
+Allows user to make their own csv of shows.
+Imports pandas and numpy.
+
+Releasing under MIT license. 
