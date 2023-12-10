@@ -19,6 +19,20 @@ for i in range(len(ani_data_frame)):
         ani_data_frame['End Date'][i] = 'N/A'
 
 print(ani_data_frame)
+find_watching_episodes = []
+find_total_episodes = []
+find_episode_title = []
+for entry in range(len(ani_data_frame)):
+    if ani_data_frame['Watch Status'][entry] == "Watching":
+        find_watching_episodes.append(int(ani_data_frame['Watched Episodes'][entry]))
+        find_total_episodes.append(int(ani_data_frame['Episodes'][entry]))
+        find_episode_title.append(ani_data_frame['Title'][entry])
+    
+result_vector = (numpy.array(find_watching_episodes) / numpy.array(find_total_episodes))*100
+# print(result_vector)
+for i in range(len(find_episode_title)):
+    print(f"You've watched: {round(float(result_vector[i]), 2)}% of {find_episode_title[i]}")
+
 
 sort = input("What do you want so sort by? (Completed, Plan to Watch, Dropped): ")
 if find_anime_watch_status(ani_data_frame, sort) == -1:
