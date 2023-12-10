@@ -12,3 +12,4 @@ def find_anime_watch_status(database, watch_status):
         if database['Watch Status'][entry].lower() == watch_status.lower():
             print(f"{database['Title'][entry]}, {str(episodes).replace(',', '/').replace(' ', '')}")
     return 0
+#test
