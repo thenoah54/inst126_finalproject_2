@@ -53,6 +53,7 @@ else:
     find_anime_watch_status(ani_data_frame, sort)
 
 # finds seasons of a Boku no Hero Academia
+# 7.4/7.5
 boku_title = """"""
 all_seasons = r"Boku no Hero Academia +\w+\w +\w+\w"
 for i in range(len(ani_data_frame)):
@@ -61,6 +62,7 @@ print(find_season_show(all_seasons, boku_title))
 
 # create new temporary csv
 add = True
+# 5.15
 add_anime = {}
 while add:
     title = input("Title of Anime: ").title()

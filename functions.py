@@ -6,6 +6,7 @@ prints the data of said watch status column.
 returns 0 for success, -1 for fail.
 """
 def find_anime_watch_status(database, watch_status):
+    # 5.12
     valid = ("completed", "dropped", "plan to watch")
     if watch_status.lower() not in valid:
         return -1
